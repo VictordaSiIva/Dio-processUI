@@ -4,11 +4,11 @@ const path = require('path');
 const app = express();
 
 
-app.use(express.static(__dirname + '/dist/Estudantes'));
+app.use(express.static(__dirname + '/src/'));
 
 app.get('/*', function(req,res) {
 
-res.sendFile(path.join(__dirname+'/dist/Estudantes/index.html'));
+res.sendFile(path.join(__dirname+'/src/index.html'));
 });
 
 // Inicia a aplicação pela porta configurada
